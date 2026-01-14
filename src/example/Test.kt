@@ -1,3 +1,5 @@
+package example
+
 var age: Int = 18
     set(value) {
         if ((value > 0) and (value<110))
@@ -25,7 +27,7 @@ abstract class Figure{
     abstract fun perimeter():Float
     abstract fun area():Float
 }
-class Rectangle(val width: Float,val height:Float):Figure(){
+class Rectangle(val width: Float,val height:Float): Figure(){
     override fun perimeter(): Float {
         return 2*(width+height)
     }
