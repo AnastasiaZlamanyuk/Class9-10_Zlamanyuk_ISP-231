@@ -1,4 +1,6 @@
 class OutpostWorker(val name: String) {
+    var maxEnergy: Int = 100
+        private set
     var energy: Int = maxEnergy
         set(value) {
             field = value.coerceIn(0,maxEnergy)
@@ -7,8 +9,7 @@ class OutpostWorker(val name: String) {
         get() = field + (energy/10)
     var level: Int = 1
         private set
-    var maxEnergy: Int = 100
-        private set
+
 
     fun work(){
         println("$name выполняет работу...")
